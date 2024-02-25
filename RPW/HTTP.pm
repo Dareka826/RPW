@@ -3,6 +3,7 @@ package RPW::HTTP;
 use strict;
 use warnings;
 
+
 use RPW::Text;
 
 our $NL = "\r\n";
@@ -47,5 +48,13 @@ sub print_headers {
     }
     RPW::Text::printl();
 }
+
+
+our @SYMBOLS = (
+    "parse_url_params",
+    "allowed_methods",
+    "print_headers",
+    "NL",
+);
 
 1;

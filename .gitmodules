@@ -1,0 +1,4 @@
+[submodule "ModYoink"]
+	path = ModYoink
+	url = https://github.com/Dareka826/ModYoink
+	branch = master

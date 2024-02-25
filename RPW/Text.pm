@@ -3,6 +3,7 @@ package RPW::Text;
 use strict;
 use warnings;
 
+
 # Print args and a newline
 sub printl {
     my $ok = 1;
@@ -102,5 +103,13 @@ sub uri_encode {
 
     return $str;
 }
+
+
+our @SYMBOLS = (
+    "printl",
+    "escape_html_special",
+    "uri_decode",
+    "uri_encode",
+);
 
 1;

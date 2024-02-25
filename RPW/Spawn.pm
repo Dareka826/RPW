@@ -3,6 +3,7 @@ package RPW::Spawn;
 use strict;
 use warnings;
 
+
 # Spawn a process and read its stdout
 sub spawn_read {
     my ($command) = @_;
@@ -44,5 +45,12 @@ sub escape_shell {
     $str =~ s/'/\\''\\'/;
     return "'$str'";
 }
+
+
+our @SYMBOLS = (
+    "spawn_read",
+    "spawn_write",
+    "escape_shell",
+);
 
 1;

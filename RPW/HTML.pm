@@ -3,6 +3,7 @@ package RPW::HTML;
 use strict;
 use warnings;
 
+
 use RPW::Text;
 
 # Element with attributes
@@ -121,5 +122,14 @@ sub div_margins {
 }
 
 our $br = e("br", undef);
+
+
+our @SYMBOLS = (
+    "ea",
+    "e",
+    "set_title_script",
+    "div_margins",
+    "br",
+);
 
 1;
