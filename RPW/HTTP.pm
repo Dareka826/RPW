@@ -16,7 +16,7 @@ sub parse_url_params {
     my %params;
     for my $param (@params_arr) {
         my ($key, $val) = split("=", $param, 2);
-        $params{$key} = uri_decode($val);
+        $params{$key} = RPW::Text::uri_decode($val);
     }
 
     return \%params;
@@ -43,9 +43,9 @@ sub print_headers {
     for my $key (keys %headers) {
         my $val = $headers{$key};
 
-        printl("$key: $val");
+        RPW::Text::printl("$key: $val");
     }
-    printl();
+    RPW::Text::printl();
 }
 
 1;

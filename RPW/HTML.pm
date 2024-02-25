@@ -42,7 +42,7 @@ sub e {
 # Set current page title via JS
 sub set_title_script {
     my ($title) = @_;
-    $title = escape_html_special($title);
+    $title = RPW::Text::escape_html_special($title);
 
     my $code = "
         // Add title element if missing
