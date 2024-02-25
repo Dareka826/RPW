@@ -35,9 +35,11 @@ sub uri_decode {
     my ($str) = @_;
 
     my $idx = 0;
-    while ($idx < length($str)) {
+    my $len = length($str);
+
+    while ($idx < $len) {
         if (substr($str, $idx, 1) eq "%") {
-            if ($idx + 2 >= length($str)) {
+            if ($idx + 2 >= $len) {
                 die "URI encoding invalid";
             }
 
@@ -45,6 +47,7 @@ sub uri_decode {
             my $c = chr(hex($code));
 
             $str = substr($str, 0, $idx) . $c . substr($str, $idx+3);
+            $len = length($str);
         }
 
         $idx += 1;
@@ -79,12 +82,17 @@ sub uri_encode {
     };
 
     my $idx = 0;
-    while ($idx < length($str)) {
+    my $len = length($str);
+
+    while ($idx < $len) {
         if (&$valid_chr_subref(substr($str, $idx, 1)) == 0) {
             my $c = substr($str, $idx, 1);
             my $cc = sprintf("%%%02x", ord($c));
 
             $str = substr($str, 0, $idx) . $cc . substr($str, $idx+1);
+            $len = length($str);
+
+            $idx += 2;
         }
 
         $idx += 1;
