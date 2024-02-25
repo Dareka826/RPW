@@ -3,8 +3,8 @@ package RPW;
 use strict;
 use warnings;
 
-use FindBin;
-use lib "$FindBin::Bin/ModYoink";
+use File::Basename;
+use lib dirname(__FILE__) . "/ModYoink";
 
 use ModYoink;
 
