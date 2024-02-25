@@ -1,3 +1,5 @@
+package RPW::Spawn;
+
 use strict;
 use warnings;
 

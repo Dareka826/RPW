@@ -1,7 +1,9 @@
+package RPW::HTTP;
+
 use strict;
 use warnings;
 
-require './text.pl';
+use RPW::Text;
 
 our $NL = "\r\n";
 

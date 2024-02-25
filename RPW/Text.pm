@@ -1,3 +1,5 @@
+package RPW::Text;
+
 use strict;
 use warnings;
 

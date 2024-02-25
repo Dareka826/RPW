@@ -1,7 +1,9 @@
+package RPW::HTML;
+
 use strict;
 use warnings;
 
-require './text.pl';
+use RPW::Text;
 
 # Element with attributes
 sub ea {
