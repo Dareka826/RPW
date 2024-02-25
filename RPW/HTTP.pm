@@ -11,6 +11,8 @@ our $NL = "\r\n";
 sub parse_url_params {
     my ($path) = @_;
 
+    if (index($path, "?") == -1) { return {}; }
+
     $path =~ s/^[^?]*\?//;
     my @params_arr = split(quotemeta("&"), $path);
 
